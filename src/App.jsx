@@ -1,8 +1,8 @@
 import { Button } from "./components/Button/Button";
 import { Input } from "./components/Input/Input";
-
 import { useState, useEffect } from "react";
 import "./App.css";
+import "./index.css";
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -12,7 +12,7 @@ export const App = () => {
   }, [counter]);
 
   const handleClickReset = () => {
-    setCounter(counter === 0);
+    setCounter(0);
   };
   const handleClickIncrement = () => {
     setCounter(counter < 5 ? counter + 1 : counter);
@@ -23,7 +23,7 @@ export const App = () => {
 
   return (
     <div>
-      <h2>Counter {counter}</h2>
+      <h2 className="title">Counter {counter}</h2>
       <div>
         <Button
           className="inc"

@@ -25,8 +25,11 @@ const Input = () => {
   return (
     <div>
       <div>
-        <label htmlFor="minValueInput">Min</label>
+        <label className="label" htmlFor="minValueInput">
+          Min
+        </label>
         <input
+          className="input"
           id="minValueInput"
           type="number"
           value={minValue}
@@ -35,8 +38,11 @@ const Input = () => {
         />
       </div>
       <div>
-        <label htmlFor="maxValueInput">Max</label>
+        <label className="label" htmlFor="maxValueInput">
+          Max
+        </label>
         <input
+          className="input"
           id="maxValueInput"
           type="number"
           value={maxValue}

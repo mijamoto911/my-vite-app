@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 
-export const Button = ({ onClick, children }) => {
+export const Button = ({ onClick, children, disabled }) => {
   return (
     <div>
-      <button onClick={onClick}>{children}</button>
+      <button onClick={onClick} disabled={disabled}>
+        {children}
+      </button>
     </div>
   );
 };
@@ -11,4 +13,5 @@ export const Button = ({ onClick, children }) => {
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
+  disabled: PropTypes.node,
 };
